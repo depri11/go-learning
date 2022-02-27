@@ -9,4 +9,11 @@ func main() {
 	args := os.Args
 	fmt.Println("Argument :")
 	fmt.Println(args)
+
+	hostname, err := os.Hostname()
+	if err != nil {
+		fmt.Println("Hostname : ", hostname)
+	} else {
+		fmt.Println("Error : ", err.Error())
+	}
 }
